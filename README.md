@@ -1,6 +1,8 @@
 # Vitals
 Android based Healthcare Clinics Decision Support System for clinics in the municipalities.
 
+<img src="https://drive.google.com/uc?export=view&id=1XCeAfu6pBLoTtRFmNHtrJZ1BYBr1YLvP"/>
+
 # Integrations
 - Firebase Auth, Analytics and Firestore
 - DialogFlow
