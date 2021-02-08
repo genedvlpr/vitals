@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DiseaseUtils.DiseaseDetailedView"
+    tools:showIn="@layout/activity_detailed_disease">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/bg1"
+                app:cardElevation="3dp"
+                android:layout_margin="10dp"
+                android:padding="20dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/diseaseDescription"
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/large_text"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="3dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/diseaseDescription"
+                        android:layout_alignBottom="@+id/diseaseDescription"
+                        android:background="@color/colorPrimary"/>
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_medical_solution"
+            android:icon="@drawable/ic_outline_favorite_border_24px"
+            android:title="Medical Solutions" />
+        <item
+            android:id="@+id/brgy_workers"
+            android:icon="@drawable/ic_outline_perm_identity_24px"
+            android:title="Barangay Medical Health Workers" />
+        <item
+            android:id="@+id/nav_diseases"
+            android:icon="@drawable/ic_outline_trending_up_24px"
+            android:title="Diseases" />
+        <item
+            android:id="@+id/nav_health_care_assistant"
+            android:icon="@drawable/ic_outline_forum_24px"
+            android:title="Health Care Assistant" />
+        <item
+            android:id="@+id/nav_persons_diseased"
+            android:icon="@drawable/ic_outline_accessible_24px"
+            android:title="Patients" />
+        <item
+            android:id="@+id/clinic_location"
+            android:icon="@drawable/ic_outline_location_on_24px"
+            android:title="Barangay Health Clinic Location" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_outline_keyboard_tab_24px"
+                android:title="Log Out"
+                tools:ignore="HardcodedText" />
+            <item
+                android:id="@+id/nav_terms_condition"
+                android:icon="@drawable/ic_outline_check_box_24px"
+                android:title="@string/terms_conditions"
+                tools:ignore="HardcodedText" />
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_outline_info_24px"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

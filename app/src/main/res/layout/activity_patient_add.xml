@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientUtils.PatientAdd"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add new patient"
+                        android:textAppearance="@style/TextAppearance.MyApp.Headline5"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="7dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Fill up all this necessary information\nof the patient."
+                        android:textAppearance="@style/TextAppearance.MyApp.Body2" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/ic_medical_record"
+                    android:tint="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tl_fName"
+                    style="@style/Widget.MaterialOutlinedTextField.Custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/divider"
+                    android:hint="First Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MyApp.TextInputText.Custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/divider"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tl_lName"
+                    style="@style/Widget.MaterialOutlinedTextField.Custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/divider"
+                    android:hint="Last Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MyApp.TextInputText.Custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_contact_no"
+                style="@style/Widget.MaterialOutlinedTextField.Custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:hint="Mobile Number"
+                app:startIconDrawable="@drawable/ic_outline_call_24px"
+                app:startIconTint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Widget.MyApp.TextInputText.Custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tl_address"
+                style="@style/Widget.MaterialOutlinedTextField.Custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:hint="Address"
+                app:startIconDrawable="@drawable/ic_outline_location_on_24px"
+                app:startIconTint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Widget.MyApp.TextInputText.Custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <!-- Convert as TextInputLayout
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tl_disease"
+                    style="@style/Widget.MaterialOutlinedTextField.Custom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:hint="Add Disease"
+                    app:startIconDrawable="@drawable/ic_outline_location_on_24px"
+                    app:startIconTint="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        style="@style/Widget.MyApp.TextInputText.Custom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_diseases"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@id/divider4"
+                    android:hint="Select Diseases"
+                    android:textAppearance="@style/TextAppearance.MyApp.Subtitle1"
+                    app:icon="@mipmap/ic_outline_disease"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/colorPrimary"
+                    app:strokeColor="@color/color_spinner_outline" />
+
+                <RelativeLayout
+                    android:id="@+id/divider4"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_medications"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@id/divider4"
+                    android:hint="Select Medicines"
+                    android:textAppearance="@style/TextAppearance.MyApp.Subtitle1"
+                    app:icon="@drawable/ic_outline_pill_capsule"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/colorPrimary"
+                    app:strokeColor="@color/color_spinner_outline" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_birthday"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@id/divider1"
+                    android:hint="Select Birthday"
+                    android:textAppearance="@style/TextAppearance.MyApp.Subtitle1"
+                    app:icon="@drawable/ic_outline_today_24px"
+                    app:iconTint="@color/colorPrimary"
+                    app:strokeColor="@color/color_spinner_outline" />
+
+                <RelativeLayout
+                    android:id="@+id/divider1"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_barangay"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@id/divider1"
+                    android:hint="Select Barangay"
+                    android:textAppearance="@style/TextAppearance.MyApp.Subtitle1"
+                    app:icon="@drawable/ic_outline_person_pin_circle_24px"
+                    app:iconTint="@color/colorPrimary"
+                    app:strokeColor="@color/color_spinner_outline" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/divider3"
+                    android:layout_weight="8"
+                    android:background="@drawable/spinner_outline"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    app:strokeColor="@color/color_spinner_outline"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_outline_face_24px"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        style="@style/TextAppearance.MyApp.Subtitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/tv_age"
+                        android:text="Age" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/divider3"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true" />
+
+                <LinearLayout
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/divider3"
+                    android:layout_weight="8"
+                    android:background="@drawable/spinner_outline"
+                    android:gravity="start|center_vertical"
+                    android:orientation="horizontal"
+                    app:strokeColor="@color/color_spinner_outline"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_outline_perm_contact_calendar_24px"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        style="@style/TextAppearance.MyApp.Subtitle1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/tv_checkup_date"
+                        android:text="Date" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_finish"
+                style="@style/Widget.MaterialUnelevatedButton.Custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Finish" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_sheet_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bottom_sheet_overlay"
+        android:visibility="invisible" />
+
+    <!-- Add TextInputLayout for "Others" option -->
+    <include layout="@layout/bottom_sheet_select_diseases"
+        />
+
+    <include layout="@layout/bottom_sheet_select_medications"
+        />
+
+    <include layout="@layout/bottom_sheet_select_barangay"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

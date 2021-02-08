@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.orbitsoftlabs.vitals">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name="com.orbitsoftlabs.vitals.TermsAndConditions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.About"
+            android:label="About"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.AssistantUtils.HealthCareAssistant"
+            android:label="Health Care Assistant"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name="com.orbitsoftlabs.vitals.ChartActivity" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.HealthWorkersUtils.HealthWorkersDetailedView"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.HealthWorkersUtils.HealthWorkers"
+            android:label="@string/title_activity_health_workers"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.PatientUtils.PatientDetailedView"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.PatientUtils.PatientActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.PatientUtils.PatientAdd"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.PatientUtils.PatientListUtils.Patients"
+            android:label="@string/title_activity_patients"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.ClinicUtils.ClinicsDetailedView"
+            android:label="@string/title_activity_clinics_detailed_view"
+            android:parentActivityName="com.orbitsoftlabs.vitals.ClinicUtils.Clinics"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.orbitsoftlabs.vitals.ClinicUtils.Clinics" />
+        </activity>
+        <activity
+            android:name="com.orbitsoftlabs.vitals.ClinicUtils.Clinics"
+            android:label="@string/title_activity_clinics"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.DiseaseUtils.DiseaseDetailedView"
+            android:label="@string/title_activity_disease_detailed_view"
+            android:parentActivityName="com.orbitsoftlabs.vitals.DiseaseUtils.Diseases"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.orbitsoftlabs.vitals.DiseaseUtils.Diseases" />
+        </activity>
+        <activity
+            android:name="com.orbitsoftlabs.vitals.DiseaseUtils.Diseases"
+            android:label="@string/title_activity_diseases"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.MedSolutionUtils.MedSolutionsDetailedView"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.MedSolutionUtils.MedicalSolutions"
+            android:label="@string/title_activity_medical_solutions"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.HomeUtils.HomeConstituents"
+            android:excludeFromRecents="true"
+            android:label=" "
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.HomeUtils.HomeHealthWorker"
+            android:excludeFromRecents="true"
+            android:label=" "
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.RegistrationUtils.RegistrationPersonalDetails"
+            android:theme="@style/MaterialTransparentStatusBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.RegistrationUtils.RegistrationName"
+            android:theme="@style/MaterialTransparentStatusBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.RegistrationUtils.RegistrationEmailPassword"
+            android:theme="@style/MaterialTransparentStatusBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.Login"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@style/MaterialTransparentStatusBar" />
+        <activity
+            android:name="com.orbitsoftlabs.vitals.Splashscreen"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@style/AppThemeFullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

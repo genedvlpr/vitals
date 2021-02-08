@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeUtils.HomeHealthWorker">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/TextAppearance.MyApp.Headline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Features"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                style="@style/TextAppearance.MyApp.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="You are logged as a Health Worker,\nyou can use these features." />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/crd1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/div1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:clickable="true"
+                    app:cardCornerRadius="8dp"
+                    app:rippleColor="@color/my_app_surface_color">
+
+                    <LinearLayout
+                        android:onClick="med_solution"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="30dp">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_outline_favorite_border_24px"
+                            android:tint="@color/my_app_surface_color" />
+
+                        <TextView
+                            style="@style/TextAppearance.MyApp.Subtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Medical\nSolutions"
+                            android:textAlignment="center"
+                            android:textColor="@color/my_app_surface_color" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <RelativeLayout
+                    android:id="@+id/div1"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/div1"
+                    android:id="@+id/crd2"
+                    android:layout_margin="5dp"
+                    android:clickable="true"
+                    app:rippleColor="@color/my_app_surface_color"
+                    android:backgroundTint="@color/colorPrimary"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:onClick="brgy_workers"
+                        android:orientation="vertical"
+                        android:padding="30dp">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_outline_perm_identity_24px"
+                            android:tint="@color/my_app_surface_color" />
+
+                        <TextView
+                            style="@style/TextAppearance.MyApp.Subtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Barangay Health Workers"
+                            android:textAlignment="center"
+                            android:textColor="@color/my_app_surface_color" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/crd3"
+                    android:layout_margin="5dp"
+                    android:layout_toLeftOf="@+id/div2"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:clickable="true"
+                    app:cardCornerRadius="8dp"
+                    app:rippleColor="@color/my_app_surface_color">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="diseases"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_outline"
+                            android:padding="7dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_outline_trending_up_24px"
+                            android:tint="@color/my_app_surface_color" />
+
+                        <TextView
+                            style="@style/TextAppearance.MyApp.Subtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:text="Diseases"
+                            android:textColor="@color/my_app_surface_color" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <RelativeLayout
+                    android:id="@+id/div2"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="5dp"
+                    android:id="@+id/crd4"
+                    android:layout_toRightOf="@+id/div2"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:clickable="true"
+                    app:cardCornerRadius="8dp"
+                    app:rippleColor="@color/my_app_surface_color">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="health_care_assistant"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:background="@drawable/circle_outline"
+                            android:padding="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_outline_forum_24px" />
+
+                        <TextView
+                            style="@style/TextAppearance.MyApp.Subtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="10dp"
+                            android:text="Health Care Assistant"
+                            android:textColor="@color/my_app_surface_color" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/crd5"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toRightOf="@+id/div2"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="true"
+                app:cardCornerRadius="8dp"
+                app:rippleColor="@color/my_app_surface_color">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="new_patient"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/circle_outline"
+                        android:padding="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_outline_person_add_24px"
+                        android:tint="@color/my_app_surface_color" />
+
+                    <TextView
+                        style="@style/TextAppearance.MyApp.Subtitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="Patients"
+                        android:textColor="@color/my_app_surface_color" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/div2"
+                android:id="@+id/crd6"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                app:rippleColor="@color/my_app_surface_color"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="clinic_location"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/circle_outline"
+                        android:padding="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_outline_location_on_24px"
+                        android:tint="@color/my_app_surface_color" />
+
+                    <TextView
+                        style="@style/TextAppearance.MyApp.Subtitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="Barangay Health Clinic Location"
+                        android:textColor="@color/my_app_surface_color" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/div2"
+                android:id="@+id/crd7"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="45dp"
+                android:clickable="true"
+                app:rippleColor="@color/my_app_surface_color"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="about"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/circle_outline"
+                        android:padding="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_outline_info_24px"
+                        android:tint="@color/my_app_surface_color" />
+
+                    <TextView
+                        style="@style/TextAppearance.MyApp.Subtitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="About the app"
+                        android:textColor="@color/my_app_surface_color" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
